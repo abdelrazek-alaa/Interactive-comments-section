@@ -1,0 +1,110 @@
+.container {
+  max-width: 40%;
+  margin: 2em auto;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 90%;
+  }
+  .m-flex-column {
+    flex-direction: column;
+  }
+  .comment-reviews {
+    order: 1;
+    flex-direction: row !important;
+  }
+  .comment-card {
+    position: relative;
+  }
+  .reply-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .date {
+    margin-left: 3.2em;
+  }
+  .comment-info {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 850px) {
+  .container {
+    max-width: 70%;
+  }
+}
+.reply-button:hover {
+  color: hsl(239, 57%, 85%);
+}
+.reply-card {
+  border-left: 1px solid lightgray;
+  margin-left: 1.5em;
+}
+.Moderate-blue {
+  color: hsl(238, 40%, 52%);
+}
+.reviews-button {
+  color: hsl(239, 57%, 85%);
+  font-size: 16px;
+}
+.reviews-button:hover {
+  color: hsl(238, 40%, 52%);
+}
+.avatar {
+  max-width: 28px;
+  max-height: 28px;
+  margin-right: 1.5em;
+}
+.comment-reviews {
+  flex-basis: 10%;
+}
+.comment-content {
+  flex-basis: 90%;
+}
+.date,
+.comment-text {
+  color: hsl(211, 10%, 45%);
+}
+/* spacing */
+.mr-0 {
+  margin-right: 0.5em;
+}
+.ml-0 {
+  margin-left: 0.5em;
+}
+.ml-3 {
+  margin-left: 3em;
+}
+.my-1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.my-3 {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+/* flexbox utilities */
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.bold {
+  font-weight: bold;
+}
+.jc-center {
+  justify-content: center;
+}
+.jc-spaceBetween {
+  justify-content: space-between;
+}
+.ai-center {
+  align-items: center;
+}
+
+/* utilities */
+.button {
+  border: 0;
+  cursor: pointer;
+}
