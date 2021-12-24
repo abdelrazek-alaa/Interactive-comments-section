@@ -1,6 +1,6 @@
 import Reply from "./Reply";
 
-export default function Comment({ data }) {
+export default function Comment({ data, currentUser }) {
   return (
     <>
       <div className="flex m-flex-column comment-card my-3">
@@ -14,12 +14,12 @@ export default function Comment({ data }) {
         <div className="comment-content">
           <header className="flex jc-spaceBetween">
             <div className="flex comment-info">
-              <img className="avatar" src={data.user.image.png}></img>
+              <img className="avatar" src={data.user.image.png} alt=""></img>
               <strong className="mr-0">{data.user.username}</strong>
               <span className="date">{data.createdAt}</span>
             </div>
             <div className="reply-button">
-              <img src="./images/icon-reply.svg"></img>
+              <img src="./images/icon-reply.svg" alt=""></img>
               <span className="reply Moderate-blue bold ml-0 button ">
                 Reply
               </span>
@@ -34,7 +34,7 @@ export default function Comment({ data }) {
       <div className="reply-card ">
         {data.replies.length > 0 &&
           data.replies.map((reply, index) => (
-            <Reply data={reply} key={reply.id}>
+            <Reply currentUser={currentUser} data={reply} key={reply.id}>
               {index}
             </Reply>
           ))}

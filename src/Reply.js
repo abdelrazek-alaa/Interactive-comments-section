@@ -1,4 +1,4 @@
-export default function Reply({ data }) {
+export default function Reply({ data, currentUser }) {
   return (
     <div className="flex m-flex-column comment-card my-3 ml-3">
       {/* reviews */}
@@ -11,18 +11,40 @@ export default function Reply({ data }) {
       <div className="comment-content">
         <header className="flex jc-spaceBetween">
           <div className="flex comment-info">
-            <img className="avatar" src={data.user.image.png}></img>
+            <img className="avatar" src={data.user.image.png} alt=""></img>
             <strong className="mr-0">{data.user.username}</strong>
+            {currentUser.username === data.user.username && (
+              <span className="mr-0 you-padge">you</span>
+            )}
             <span className="date">{data.createdAt}</span>
           </div>
-          <div className="reply-button">
-            <img src="./images/icon-reply.svg"></img>
-            <span className="reply Moderate-blue bold ml-0 button ">Reply</span>
-          </div>
+          {currentUser.username === data.user.username ? (
+            <div className="flex user-buttons">
+              <div>
+                <img src="./images/icon-delete.svg" alt=""></img>
+                <span className="reply Moderate-blue bold ml-0 button soft-red d-none">
+                  Delete
+                </span>
+              </div>
+              <div className="ml-0 ">
+                <img src="./images/icon-edit.svg" alt=""></img>
+                <span className="reply Moderate-blue bold ml-0 button d-none">
+                  Edit
+                </span>
+              </div>
+            </div>
+          ) : (
+            <div className="reply-button">
+              <img src="./images/icon-reply.svg" alt=""></img>
+              <span className="reply Moderate-blue bold ml-0 button ">
+                Reply
+              </span>
+            </div>
+          )}
         </header>
         <article>
           <p className="comment-text">
-            <span className="Moderate-blue bold">{`@${data.replyingTo} `}</span>
+            <span className="Moderate-blue bold replyingTo">{`@${data.replyingTo} `}</span>
             {data.content}
           </p>
         </article>
