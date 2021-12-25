@@ -1,6 +1,6 @@
 export default function Reply({ data, currentUser }) {
   return (
-    <div className="flex m-flex-column comment-card my-3 ml-3">
+    <div className="flex m-flex-column comment-card my-3 ml-3 spacing-m">
       {/* reviews */}
       <div className="flex column comment-reviews ai-center">
         <button className="reviews-button bold button">+</button>
@@ -22,13 +22,13 @@ export default function Reply({ data, currentUser }) {
             <div className="flex user-buttons">
               <div>
                 <img src="./images/icon-delete.svg" alt=""></img>
-                <span className="reply Moderate-blue bold ml-0 button soft-red d-none">
+                <span className="reply Moderate-blue bold ml-0 button soft-red ">
                   Delete
                 </span>
               </div>
               <div className="ml-0 ">
                 <img src="./images/icon-edit.svg" alt=""></img>
-                <span className="reply Moderate-blue bold ml-0 button d-none">
+                <span className="reply Moderate-blue bold ml-0 button ">
                   Edit
                 </span>
               </div>

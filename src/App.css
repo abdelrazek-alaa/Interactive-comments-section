@@ -6,6 +6,13 @@
   .container {
     max-width: 90%;
   }
+  .spacing-m {
+    margin-left: 0px !important;
+  }
+  .reply-card {
+    margin-left: 0.3em !important;
+    padding-left: 0.7em;
+  }
   .m-flex-column {
     flex-direction: column;
   }
@@ -37,6 +44,7 @@
     max-width: 70%;
   }
 }
+
 .replyingTo {
   cursor: pointer;
 }

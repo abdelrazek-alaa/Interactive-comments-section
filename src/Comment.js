@@ -31,7 +31,7 @@ export default function Comment({ data, currentUser }) {
         </div>
       </div>
       {/* replies */}
-      <div className="reply-card ">
+      <div className="reply-card">
         {data.replies.length > 0 &&
           data.replies.map((reply, index) => (
             <Reply currentUser={currentUser} data={reply} key={reply.id}>
