@@ -3,7 +3,7 @@ import { data } from "./data";
 
 function App() {
   return (
-    <div className="App max-w-lg mx-auto">
+    <div className="p-6 max-w-lg mx-auto">
       <main>
         {/* comment card */}
         {data.comments.map((comment) => (
@@ -20,7 +20,7 @@ function App() {
             alt="avatar"
             src={data.currentUser.image.png}
           ></img>
-          <form className="">
+          <form className="space-y-1">
             <input
               className="py-3"
               type="text"
